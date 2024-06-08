@@ -25,9 +25,9 @@ function App() {
 
   return (
     <Authenticator>
-      {({ signOut }) => (
+      {({ signOut, user }) => (
         <main>
-          <h1>Hello! Here are your to do's:</h1>
+          <h1>Hello {user?.signInDetails?.loginId}! Here are your to do's:</h1>
           <button onClick={createTodo}>+ new</button>
           <ul>
             {todos.map((todo) => (
